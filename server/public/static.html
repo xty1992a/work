@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    .cell{
+      width: 300px;
+      height: 600px;
+      position: relative;
+      background-color: #5152e6;
+    }
+    .outer{
+      background-color: orangered;
+      list-style: none;
+      height: 400px;
+      padding: 0;
+      margin: 0;
+    }
+    .inner{
+      border-bottom: 1px solid;
+      background: yellowgreen;
+      position: absolute;
+      height: 100px;
+      bottom: 0;
+      right: 0;
+      left: 0;
+    }
+    p{
+      background-color: orange;
+    }
+    span{
+      vertical-align: 0%;
+    }
+  </style>
+</head>
+<body>
+
+<div class="cell">
+  <ul class="outer">
+    <li class="inner"></li>
+    <li class="inner"></li>
+    <li class="inner"></li>
+    <li class="inner"></li>
+  </ul>
+</div>
+
+<button id="btn1">upup</button>
+
+<p>
+  <span>span</span>
+  <i>i m in i</i>
+</p>
+
+<script type="text/javascript">
+  var outer = document.querySelector('.outer')
+  var btn1 = document.getElementById('btn1')
+  var tanslateY = 0
+  btn1.onclick = function () {
+    tanslateY += 10
+    console.log(outer)
+    up(tanslateY)
+  }
+  function up(tanslateY) {
+    outer.style.transform = 'translateY(-'+tanslateY+'px)'
+  }
+</script>
+
+</body>
+</html>

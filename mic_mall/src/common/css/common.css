@@ -1,0 +1,11 @@
+.clearfix:before, .clearfix:after{
+  display: table;
+  content: '';
+  clear: both;
+}
+.clearfix{
+  *zoom: 1;
+}
+.radius{
+  border-radius: 25% 25% 25% 25% / 50% 50% 50% 50%;
+}
